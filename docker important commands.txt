@@ -1,0 +1,187 @@
+1  sudo apt-get update
+    2  sudo apt install docker.io -y
+    3  sudo apt-get update
+    4  sudo apt install docker.io -y
+    5  docker version
+    6  docker info
+    7  pwd
+    8  whoami
+    9  sudo usermod -aG docker $USER
+   10  sudo systemctl status docker
+   11  docker ps
+   12  exit
+   13  docker version
+   14  docker ps
+   15  docker info
+   16  docker images
+   17  docker pull tomee
+   18  docker images
+   19  docker run --name mytomcat  -p   7070:8080   tomee
+   20  docker ps
+   21  docker ps -a
+   22  docker start c4bec447aa0d
+   23  docker ps -a
+   24  docker stop mytomcat
+   25  docker run --name myjenkins  -p 9090:8080    -d   jenkins\jenkins
+   26  sudo docker run --name myjenkins  -p 9090:8080    -d   jenkins\jenkins
+   27  docker run --help
+   28  docker login
+   29  sudo docker run --name myjenkins  -p 9090:8080    -d   jenkins\jenkins
+   30  docker pull jenkins/jenkins:latest
+   31  docker images
+   32  docker inspect 6c30514bdde6
+   33  docker port 6c30514bdde6
+   34  docker run -d -p 7070:8080 --name myjenkins jenkins/jenkins
+   35  docker ps
+   36  docker ps -a
+   37  sudo cat /var/jenkins_home/secrets/initialAdminPassword
+   38  cat /var/jenkins_home/secrets/initialAdminPassword
+   39  docker stop 26b939a9cb74
+   40  docker ps
+   41  docker ps -a
+   42  docker images
+   43  docker docker restart 10 26b939a9cb74
+   44  docker restart 10 26b939a9cb74
+   45  docker restart -t 10 26b939a9cb74
+   46  docker port c4bec447aa0d
+   47  docker port 26b939a9cb74
+   48  docker start c4bec447aa0d
+   49  docker run -d -p 9090:8080 --name mytomcat tomee
+   50  docker run -d -p 9090:8080 --name mytomcat1 tomee
+   51  docker ps
+   52  docker port 884bbb244a15
+   53  docker stop $(docker ps -aq)
+   54  docker ps
+   55  docker ps -a
+   56  docker start  $(docker ps -aq)
+   57  docker stop $(docker ps -aq)
+   58  docker ps
+   59  docker ps -a
+   60  docker rm $(docker ps -aq)
+   61  docker ps
+   62  docker ps -a
+   63  docker images
+   64  docker stop $(docker pa -aq)
+   65  docker images
+   66  docker rmi 6c30514bdde6 6ef78133c44d
+   67  docker images
+   68  docker run --name myubuntu  -it ubuntu
+   69  docker ps
+   70  docker logs 1fe35eb761b2
+   71  docker port 1fe35eb761b2
+   72  docker logs 1fe35eb761b2
+   73  docker inspect  1fe35eb761b2
+   74  docker exec -it 1fe35eb761b2 bash
+   75  docker run --name  appserver  -P  -d  nginx
+   76  docker ps
+   77  docker port 1007d4212a7e
+   78  docker run  --name  mydb  -d  -e MYSQL_ROOT_PASSWORD=sunil  mysql:5
+   79  docker images
+   80  docker ps
+   81  docker port 8a089c6572cf
+   82  docker  exec   -it  mydb  bash
+   83  ls
+   84  docker ps
+   85  docker ps -a
+   86  docker rm -f (docker ps -aq)
+   87  docker rm -f(docker ps -aq)
+   88  docker rm -f $(docker ps -aq)
+   89  docker ps
+   90  docker images
+   91  docker rm -f $(docker ps -aq)
+   92  docker rmi mysql nginx ubuntu
+   93  docker pull almalinux
+   94  docker images
+   95  docker pull nginx:latest
+   96  docker images
+   97  docker run -d -P nginx
+   98  docker ps
+   99  docker port nginx
+  100  docker port 4ab3a332d931
+  101  docker images
+  102  docker images prune
+  103  docker images
+  104  docker rmi -f  $(docker ps -aq)
+  105  docker images
+  106  docker rmi dd6675b5cfea 6efc10a0510f f4b24db3d26d
+  107  docker images
+  108  docker rmi -f 6efc10a0510f
+  109  docker stop 6efc10a0510f
+  110  docker ps
+  111  docker stop 4ab3a332d931
+  112  docker rm 4ab3a332d931
+  113  docker rmi -f 6efc10a0510f
+  114  docker images
+  115  docker ps
+  116  docker run --name c10 -it   busybox
+  117  docker run   --name  c20 --link c10:c10-alias  -it     busybox
+  118  ping c10
+  119  docker images
+  120  docker ps
+  121  docker rm -f $(docker ps - aq)
+  122  docker rm -f  $(docker ps - aq)
+  123  docker rm -f  $(docker ps -aq)
+  124  docker ps -a
+  125  docker images prune
+  126  docker images
+  127  docker rmi 7cfbbec8963d
+  128  docker images
+  129  docker run --name mydb  -d  -e  MYSQL_ROOT_PASSWORD=sunil  mysql:5
+  130  docker container ls
+  131  docker run  --name mysite  -d  -p 5050:80 --link mydb:mysql  wordpress
+  132  docker ps
+  133  docker port ac33b84213dc
+  134  docker rm  -f  $(docker ps -aq)
+  135  docker ps
+  136  docker images
+  137  docker rmi $(docker images -a -q)
+  138  docker images
+  139  sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  140  sudo chmod +x /usr/local/bin/docker-compose
+  141  docker-compose version
+  142  vim docker-compose.yml
+  143  docker-compose up
+  144  docker-compose up -d
+  145  docker ps
+  146  docker-compose   stop
+  147  docker ps
+  148  docker ps -a
+  149  docker rm -f $(docker ps -aq)
+  150  vim docker-compose.yml
+  151  docker-compose up -d
+  152  docker ps
+  153  docker ps -a
+  154  docker images
+  155  docker rm -f $(docker ps -aq)
+  156  docker ps
+
+
+docker volume practice:
+# mkdir /data
+# docker run --name c1 -it -v /data centos  ( v option is used to attach volume)
+
+# ls  ( Now, we can see the data folder also in the container)
+
+# cd data
+# touch file1   file2 
+# ls
+# exit  ( To come out of the container )
+# docker inspect c1
+
+We can see under mounts "data" folder it located in the host machine.
+Copy the path
+
+c1 container is created and /data folder created and created file1 and file2 files
+now inspect the c1 container and check the mount path , now remove the container and check the mountpath and seethe files stored in mountpath of docker host
+
+/var/lib/docker/volumes/31d4c1d252ff2ca98e8b08ccb87e6f8b6625d7edc36ddcbdba709fc3b7acfd5d/_data
+
+
+docker volumes: always the data will go to docker host volume i.e.., in /var/lib/docker/volume using the mount path
+
+so importance of mount path is to store the data of container in docker host
+
+Comeout of the container without exit
+# Ctrl +p  Ctrl +q  ( container will still runs in background )
+
+/var/lib/docker/volumes/8bf486507fc27fa78c26cfe7e2e57a162969b20a9b7eaf45b816952ae32945f8/_data
