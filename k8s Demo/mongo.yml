@@ -19,6 +19,18 @@ spec:
         image: mongo:5.0
         ports:
         - containerPort: 27017
+        env:
+        -name: MONGO_INITDB_ROOT_USERNAME
+         -name: MONGO_INITDB_ROOT_USERNAME
+         valueFrom:
+            secretkeyRef: 
+             name: mongo-secret
+             key:  mango-user
+        -name: MONGO_INITDB_ROOT_USERNAME
+         valueFrom:
+           secretkeyRef: 
+             name: mongo-secret
+             key:  mango-password
 ---
 apiVersion: v1
 kind: Service
